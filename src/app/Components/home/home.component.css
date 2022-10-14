@@ -1,0 +1,70 @@
+.registration {
+    margin: 50px auto;
+    padding: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 50px;
+    border: 5px solid green;
+  }
+  
+  .error_sign {
+    font-size: 1.5rem;
+    color: red
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+    font-size: .9rem;
+  }
+  
+  .success_sign {
+    font-size: 1.5rem;
+    color: green;
+  }
+  
+  .success {
+    font-size: 1.5rem;
+    color: green;
+    margin-top: 5px;
+    padding: 5px;
+  }
+  
+  .registration .form-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+  }
+  
+  .registration label {
+    font-size: 1.4rem;
+  }
+  
+  .registration input {
+    padding: 3px 7px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    width: 50%;
+  }
+  
+  .registration input[type="submit"] {
+    cursor: pointer;
+    padding: 10px 120px;
+    border-radius: 20px;
+    border: none;
+    background-color: green;
+    opacity: .7;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .registration input[type="submit"]:hover {
+    opacity: 1;
+  }

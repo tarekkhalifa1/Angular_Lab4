@@ -1,0 +1,7 @@
+<app-header></app-header>
+<router-outlet>
+    <div class="hide">
+        <app-home (myEvent)="getData($event)"></app-home>
+        <app-users [getUserData]="user"></app-users>
+    </div>
+</router-outlet>

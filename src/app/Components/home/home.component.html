@@ -1,0 +1,56 @@
+<div class="container">
+  <h1 class="text-center mt-5 text-dark">Welcome</h1>
+
+
+  <form [formGroup]="myRegFormValidation" class="registration"
+    (ngSubmit)="SendData(name.value, +age.value, email.value)">
+    <div class="form-controls">
+      <label>Name</label>
+      <input #name formControlName="name" type="text" />
+      <div class="error_sign" *ngIf="!NameValid">
+        x
+      </div>
+      <div class="success_sign" *ngIf="NameValid">
+        ✓
+      </div>
+    </div>
+    <div class="error" *ngIf="!NameValid">
+      min 3 characters
+    </div>
+
+    <div class="form-controls">
+      <label>Age</label>
+      <input #age formControlName="age" type="number" />
+      <div class="error_sign" *ngIf="!AgeValid">
+        x
+      </div>
+      <div class="success_sign" *ngIf="AgeValid">
+        ✓
+      </div>
+    </div>
+    <div class="error" *ngIf="!AgeValid">
+      from 20 to 40
+    </div>
+
+    <div class="form-controls">
+      <label>Email</label>
+      <input #email formControlName="email" type="text" />
+      <div class="error_sign" *ngIf="!EmailValid">
+        x
+      </div>
+      <div class="success_sign" *ngIf="EmailValid">
+        ✓
+      </div>
+
+    </div>
+    <div class="error" *ngIf="!EmailValid">
+      Email required
+    </div>
+    <div class="form-controls">
+      <input type="submit" value="Add user">
+    </div>
+    <div *ngIf="successMsg" class="alert alert-success w-75 text-center">
+      {{successMsg}}
+    </div>
+  </form>
+</div>
